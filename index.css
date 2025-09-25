@@ -499,14 +499,17 @@ picture[hidden] {
 }
 
 .number-indicators {
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .number-indicators * {
   cursor: pointer;
+  width: 3rem;
   border-radius: 50%;
   aspect-ratio: 1;
-  border-color: hsl(var(--clr-white) / 0.25);
+  border: 1px solid  hsl(var(--clr-white) / 0.25);
+  background: none;
+  outline: none;
 }
 
 .number-indicators *:hover,
@@ -615,6 +618,30 @@ picture[hidden] {
 .crew-details h2 {
   color: hsl(var(--clr-white) / 0.5);
 }
+
+.grid-container--technology{
+  grid-template-areas: 
+  "title"
+  "image"
+  "tabs"
+  "content";
+ 
+}
+
+.grid-container--technology picture{
+  grid-area: image;
+}
+.grid-container--technology .numbered-title{
+  grid-area: title;
+}
+.grid-container--technology .number-indicators{
+  grid-area: tabs;
+  outline: 1px solid limegreen;
+}
+.grid-container--technology .tech-details{
+  grid-area: content;
+}
+
 
 /* ------------------- */
 /* Responsive Layout */
