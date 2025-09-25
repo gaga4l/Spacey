@@ -113,6 +113,9 @@ figure {
   max-width: 100%;
   display: block;
 }
+picture[hidden]{
+  display: none !important;
+}
 
 /* remove animations for people who've turned them off */
 
@@ -473,6 +476,10 @@ figure {
   --gap: 2rem;
   background-color: transparent;
 }
+.tab-lists {
+  --gap: 2rem;
+  background-color: transparent;
+}
 
 .dot-indicators * {
   cursor: pointer;
@@ -556,7 +563,7 @@ figure {
 .grid-container--destination > .numbered-title {
   grid-area: title;
 }
-.grid-container--destination > .tab-list {
+.grid-container--destination > .tab-lists {
   grid-area: tabs;
 }
 .grid-container--destination > .destination-info {

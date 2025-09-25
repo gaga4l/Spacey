@@ -84,54 +84,58 @@
       </h1>
 
   <!-- Moon -->
-      <picture>
+      <picture class="moon">
         <source srcset="./assets/destination/image-moon.webp" type="image/webp">
         <img src="./assets/destination/image-moon.png" alt="the moon picture" />
       </picture>
     
   <!-- Mars -->
 
-        <picture hidden >
+        <picture hidden class="mars">
         <source srcset="./assets/destination/image-mars.webp" type="image/webp">
         <img src="./assets/destination/image-mars.png" alt="the Mars planet picture" />
       </picture>
 
   <!-- Europa -->
 
-      <picture hidden >
+      <picture hidden class="europa">
         <source srcset="./assets/destination/image-europa.webp" type="image/webp">
         <img src="./assets/destination/image-europa.png" alt="the Europa planet picture" />
       </picture>
 
   <!-- Titan -->
 
-      <picture hidden >
+      <picture hidden class="titan">
         <source srcset="./assets/destination/image-titan.webp" type="image/webp">
         <img src="./assets/destination/image-titan.png" alt="the Titan planet picture" />
       </picture>
 
       
 
-      <div class="tab-list underline-indicators flex">
+      <div class="tab-lists underline-indicators flex">
         <button
+        id="moon"
           aria-selected="true"
           class="tab-list uppercase text-accent letter-spacing-2"
         >
           Moon
         </button>
         <button
+        id="mars"
           aria-selected="false"
           class="tab-list uppercase text-accent letter-spacing-2"
         >
           Mars
         </button>
         <button
+        id="europa"
           aria-selected="false"
           class="tab-list uppercase text-accent letter-spacing-2"
         >
           Europa
         </button>
         <button
+        id="titan"
           aria-selected="false"
           class="tab-list uppercase text-accent letter-spacing-2"
         >
@@ -139,7 +143,7 @@
         </button>
       </div>
 
-      <article class="destination-info flow">
+      <article class="moon destination-info flow">
         <h2 class="fs-800 ff-serif uppercase">Moon</h2>
         <p>
           See our planet as you’ve never seen it before. A perfect relaxing trip
@@ -162,7 +166,7 @@
 
 <!-- Mars -->
 
-      <article hidden class="destination-info flow">
+      <article hidden class="mars destination-info flow">
         <h2 class="fs-800 ff-serif uppercase">Mars</h2>
         <p>
           Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, 
@@ -184,7 +188,7 @@
 
 <!-- Europa -->
 
-      <article hidden class="destination-info flow">
+      <article hidden class="europa destination-info flow">
         <h2 class="fs-800 ff-serif uppercase">Europa</h2>
         <p>
           The smallest of the four Galilean moons orbiting Jupiter, Europa is a 
@@ -207,7 +211,7 @@
 
   <!-- Titan -->
 
-      <article hidden class="destination-info flow">
+      <article hidden class="titan destination-info flow">
         <h2 class="fs-800 ff-serif uppercase">Titan</h2>
         <p>
           The only moon known to have a dense atmosphere other than Earth, Titan 
