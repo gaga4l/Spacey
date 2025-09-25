@@ -48,7 +48,7 @@
           data-visible="false"
           class="primary-navigation flex underline-indicators"
         >
-          <li class="active">
+          <li>
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
               href="index.html"
@@ -62,7 +62,7 @@
               ><span aria-hidden="true">01</span>Destination</a
             >
           </li>
-          <li>
+          <li class="active">
             <a
               class="ff-sans-cond uppercase text-white letter-spacing-2"
               href="crew.html"
@@ -84,24 +84,24 @@
         <span aria-hidden="true">02</span>Meet your crew
       </h1>
 
-      <div class="dot-indicators flex">
-        <button id="commander" class="dots" aria-selected="true">
+      <div role="tab-list" class="dot-indicators flex">
+        <button aria-controls="commander" data-image="commander-image" role="tab"  aria-selected="true">
           <span  class="sr-only">The commander</span>
         </button>
-        <button class="dots" id="mission-specialist" aria-selected="false">
+        <button aria-controls="mission-specialist" data-image="mission-specialist-image" role="tab" aria-selected="false">
           <span class="sr-only">The mission specialist</span>
         </button>
-        <button class="dots" id="pilot" aria-selected="false">
+        <button aria-controls="pilot" data-image="pilot-image" role="tab" aria-selected="false">
           <span class="sr-only">The pilot</span>
         </button>
-        <button class="dots" id="crew-engineer" aria-selected="false">
+        <button aria-controls="crew-engineer" data-image="crew-engineer-image" role="tab" aria-selected="false">
           <span class="sr-only">The crew engineer</span>
         </button>
       </div>
 
       <!-- The Commander -->
 
-      <article class="commander crew-details flow">
+      <article role="tab-panel" id="commander" class="crew-details flow">
         <header class="flow flow--space-small">
           <h2 class="uppercase fs-600 ff-serif">Commander</h2>
           <p class="uppercase fs-700 letter-spacing-2 ff-serif">
@@ -117,7 +117,7 @@
 
       <!-- Mission Specialist -->
 
-      <article hidden class="mission-specialist crew-details flow">
+      <article role="tab-panel" id="mission-specialist" class="crew-details flow" hidden>
         <header class="flow flow--space-small">
           <h2 class="uppercase fs-600 ff-serif">Mission Specialist</h2>
           <p class="uppercase fs-700 letter-spacing-2 ff-serif">
@@ -133,7 +133,7 @@
 
       <!-- The Pilot -->
 
-      <article hidden class="pilot crew-details flow">
+      <article role="tab-panel" id="pilot" class="crew-details flow" hidden>
         <header class="flow flow--space-small">
           <h2 class="uppercase fs-600 ff-serif">Pilot</h2>
           <p class="uppercase fs-700 letter-spacing-2 ff-serif">
@@ -150,7 +150,7 @@
 
       <!-- The Crew Engineer -->
 
-      <article hidden class="crew-engineer crew-details flow">
+      <article role="tab-panel" id="crew-engineer" class="crew-details flow" hidden>
         <header class="flow flow--space-small">
           <h2 class="uppercase fs-600 ff-serif">Flight Engineer</h2>
           <p class="uppercase fs-700 letter-spacing-2 ff-serif">
@@ -165,7 +165,7 @@
         </p>
       </article>
 
-      <picture class="commander">
+      <picture id="commander-image">
         <source
           srcset="./assets/crew/image-douglas-hurley.webp"
           type="image/webp"
@@ -178,7 +178,7 @@
 
       <!-- The mission specialist -->
 
-      <picture hidden class="mission-specialist">
+      <picture hidden id="mission-specialist-image">
         <source
           srcset="./assets/crew/image-mark-shuttleworth.webp"
           type="image/webp"
@@ -191,7 +191,7 @@
 
       <!-- The Pilot -->
 
-      <picture hidden class="pilot">
+      <picture hidden id="pilot-image">
         <source
           srcset="./assets/crew/image-victor-glover.webp"
           type="image/webp"
@@ -201,7 +201,7 @@
 
       <!-- The Crew Engineer -->
 
-      <picture hidden class="crew-engineer">
+      <picture hidden id="crew-engineer-image">
         <source
           srcset="./assets/crew/image-anousheh-ansari.webp"
           type="image/webp"

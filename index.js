@@ -1,39 +1,29 @@
 const nav = document.querySelector(".primary-navigation");
 const navToggle = document.querySelector(".mobile-app-navigation");
-const tabList = document.querySelectorAll(".tab-list");
-let nowTab = document.querySelectorAll(".moon");
-const dots = document.querySelectorAll(".dots");
-let nowDot = document.querySelectorAll(".commander");
+const tabList = document.querySelector('[role="tab-list"]')
+const tabs = tabList.querySelectorAll('[role="tab"]')
 
-dots.forEach((dot) => {
-  dot.addEventListener("click", () => {
-    document.querySelector(".dots[aria-selected='true']")
-      ?.setAttribute("aria-selected", false);
-    nowDot.forEach((now) => {
-      now.setAttribute("hidden", "");
-    });
-    nowDot = document.querySelectorAll(`.${dot.getAttribute("id")}`);
-    dot.setAttribute("aria-selected", true);
-    nowDot.forEach((now) => {
-      now.removeAttribute("hidden", "");
-    });
-  });
-});
+tabs.forEach((tab) => {
+  tab.addEventListener("click", (e) => {
+    const article = document.getElementById(`${e.target.getAttribute("aria-controls")}`)
+    const picture = document.getElementById(`${e.target.getAttribute("data-image")}`)
 
-tabList.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    document.querySelector(".tab-list[aria-selected='true']")
-      ?.setAttribute("aria-selected", false);
-    nowTab.forEach((now) => {
-      now.setAttribute("hidden", "");
-    });
-    nowTab = document.querySelectorAll(`.${tab.getAttribute("id")}`);
-    tab.setAttribute("aria-selected", true);
-    nowTab.forEach((now) => {
-      now.removeAttribute("hidden", "");
-    });
-  });
-});
+    document.querySelector('[aria-selected="true"]').setAttribute("aria-selected",false)
+
+    document.querySelectorAll(`[role="tab-panel"]`).forEach(article => {
+      article.setAttribute("hidden", "")
+    })
+    document.querySelectorAll(`picture`).forEach(article => {
+      article.setAttribute("hidden", "")
+    })
+
+    tab.setAttribute("aria-selected", true)
+    picture.removeAttribute("hidden")
+    article.removeAttribute("hidden")
+  })
+})
+
+
 
 navToggle.addEventListener("click", () => {
   const curr = nav.getAttribute("data-visible");
