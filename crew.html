@@ -81,24 +81,28 @@
     </header>
     <main id="main" class="grid-container grid-container--crew flow">
       <h1 class="numbered-title">
-        <span aria-hidden="true">02</span>Meet your crew Commander
+        <span aria-hidden="true">02</span>Meet your crew
       </h1>
+      
 
       <div class="dot-indicators flex">
-        <button aria-selected="true">
-          <span class="sr-only">The commander</span>
+        <button class="dots" aria-selected="true">
+          <span id="commander" class="sr-only">The commander</span>
         </button>
-        <button aria-selected="false">
+        <button class="dots" id="mission-specialist" aria-selected="false">
           <span class="sr-only">The mission specialist</span>
         </button>
-        <button aria-selected="false">
+        <button class="dots" id="pilot" aria-selected="false">
           <span class="sr-only">The pilot</span>
         </button>
-        <button aria-selected="false">
+        <button class="dots" id="crew-engineer" aria-selected="false">
           <span class="sr-only">The crew engineer</span>
         </button>
       </div>
-      <article class="crew-details flow">
+
+  <!-- The Commander -->
+
+      <article class="commander crew-details flow">
         <header class="flow flow--space-small">
           <h2 class="uppercase fs-600 ff-serif">Commander</h2>
           <p class="uppercase fs-700 letter-spacing-2 ff-serif">
@@ -111,13 +115,105 @@
           time as commander of Crew Dragon Demo-2.
         </p>
       </article>
-      <picture>
+
+<!-- Mission Specialist -->
+
+      <article hidden class="mission-specialist crew-details flow">
+        <header class="flow flow--space-small">
+          <h2 class="uppercase fs-600 ff-serif">Mission Specialist</h2>
+          <p class="uppercase fs-700 letter-spacing-2 ff-serif">
+            Mark Shuttleworth
+          </p>
+        </header>
+        <p>
+          Mark Richard Shuttleworth is the founder and CEO of Canonical, the company behind 
+  the Linux-based Ubuntu operating system. Shuttleworth became the first South 
+  African to travel to space as a space tourist.
+        </p>
+      </article>
+
+<!-- The Pilot -->
+
+      <article hidden class="pilot crew-details flow">
+        <header class="flow flow--space-small">
+          <h2 class="uppercase fs-600 ff-serif">Pilot</h2>
+          <p class="uppercase fs-700 letter-spacing-2 ff-serif">
+            Victor Glover
+          </p>
+        </header>
+        <p>
+          Pilot on the first operational flight of the SpaceX Crew Dragon to the 
+  International Space Station. Glover is a commander in the U.S. Navy where 
+  he pilots an F/A-18.He was a crew member of Expedition 64, and served as a 
+  station systems flight engineer.
+        </p>
+      </article>
+
+
+<!-- The Crew Engineer -->
+
+      <article hidden class="crew-engineer crew-details flow">
+        <header class="flow flow--space-small">
+          <h2 class="uppercase fs-600 ff-serif">Flight Engineer</h2>
+          <p class="uppercase fs-700 letter-spacing-2 ff-serif">
+            Anousheh Ansari
+          </p>
+        </header>
+        <p>
+          Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. 
+  Ansari was the fourth self-funded space tourist, the first self-funded woman to 
+  fly to the ISS, and the first Iranian in space.
+        </p>
+      </article>
+
+
+
+      <picture class="commander">
         <source
           srcset="./assets/crew/image-douglas-hurley.webp"
           type="image/webp"
         />
         <img
           src="./assets/crew/image-douglas-hurley.png"
+          alt="Douglas Hurley"
+        />
+      </picture>
+
+ <!-- The mission specialist -->
+
+      <picture hidden class="mission-specialist">
+        <source
+          srcset="./assets/crew/image-mark-shuttleworth.webp"
+          type="image/webp"
+        />
+        <img
+          src="./assets/crew/image-mark-shuttleworth.png"
+          alt="Douglas Hurley"
+        />
+      </picture>
+
+<!-- The Pilot -->
+
+      <picture hidden class="pilot">
+        <source
+          srcset="./assets/crew/image-victor-glover.webp"
+          type="image/webp"
+        />
+        <img
+          src="./assets/crew/image-victor-glover.png"
+          alt="Douglas Hurley"
+        />
+      </picture>
+
+<!-- The Crew Engineer -->
+
+      <picture hidden class="crew-engineer">
+        <source
+          srcset="./assets/crew/image-anousheh-ansari.webp"
+          type="image/webp"
+        />
+        <img
+          src="./assets/crew/image-anousheh-ansari.png"
           alt="Douglas Hurley"
         />
       </picture>
