@@ -597,14 +597,11 @@ figure {
   max-width: 60%;
   grid-area: image;
   border-bottom: 1px solid hsl(var(--clr-white) / 0.1);
-  outline: 1px solid limegreen;
-
 }
 .grid-container--crew > .dot-indicators {
   grid-area: tabs;
 }
 .grid-container--crew > .crew-details {
-  outline: 1px solid limegreen;
   grid-area: content;
 }
 
@@ -693,9 +690,9 @@ figure {
 
   .grid-container--crew {
     grid-template-areas: 
-      '. title title .'
-      '. content image .'
-      '. tabs image .';
+      ". title title ."
+      ". content image ."
+      ". tabs image .";
   }
   .grid-container--crew picture {
     max-width: 90%;
@@ -728,7 +725,7 @@ body {
   background-image: url(./assets/home/background-home-mobile.jpg);
 }
 
-@media (min-width: 35rem) {
+@media (min-width: 35rem){
   .home {
     background-image: url(./assets/home/background-home-tablet.jpg);
     background-position: center center;
@@ -746,14 +743,14 @@ body {
 }
 
 @media (min-width: 35rem) {
-  .home {
+  .destination {
     background-image: url(./assets/home/background-destination-tablet.jpg);
     background-position: center center;
   }
 }
 
 @media (min-width: 45rem) {
-  .home {
+  .destination {
     background-image: url(./assets/home/background-destination-desktop.jpg);
   }
 }
