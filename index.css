@@ -502,12 +502,12 @@ picture[hidden] {
   flex-direction: row;
 }
 
-.number-indicators * {
+.number-indicators .number-list {
   cursor: pointer;
   width: 3rem;
   border-radius: 50%;
   aspect-ratio: 1;
-  border: 1px solid  hsl(var(--clr-white) / 0.25);
+  border: 1px solid hsl(var(--clr-white) / 0.25);
   background: none;
   outline: none;
 }
@@ -618,30 +618,38 @@ picture[hidden] {
 .crew-details h2 {
   color: hsl(var(--clr-white) / 0.5);
 }
-
-.grid-container--technology{
-  grid-template-areas: 
-  "title"
-  "image"
-  "tabs"
-  "content";
- 
+.crew-details > p {
+  color: hsl(var(--clr-light) / 0.8);
 }
 
-.grid-container--technology picture{
+.tech-details h2 {
+  color: hsl(var(--clr-white) / 0.5);
+}
+.tech-details > p {
+  color: hsl(var(--clr-light) / 0.8);
+}
+.grid-container--technology {
+  grid-template-areas:
+    "title"
+    "image"
+    "tabs"
+    "content";
+      --flow-space: 2rem;
+
+}
+
+.grid-container--technology picture {
   grid-area: image;
 }
-.grid-container--technology .numbered-title{
+.grid-container--technology .numbered-title {
   grid-area: title;
 }
-.grid-container--technology .number-indicators{
+.grid-container--technology .number-indicators {
   grid-area: tabs;
-  outline: 1px solid limegreen;
 }
-.grid-container--technology .tech-details{
+.grid-container--technology .tech-details {
   grid-area: content;
 }
-
 
 /* ------------------- */
 /* Responsive Layout */
@@ -676,6 +684,9 @@ picture[hidden] {
   .numbered-title {
     justify-self: start;
     margin-top: 2rem;
+  }
+  .number-indicators .number-list {
+    width: 3.5rem;
   }
 }
 
@@ -721,6 +732,36 @@ picture[hidden] {
 
   .grid-container--destination > picture {
     max-width: 95%;
+  }
+
+  .number-indicators {
+    flex-direction: column;
+  }
+
+  .grid-container--technology {
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 10rem) repeat(
+        2,
+        minmax(0, 60rem)
+      ) minmax(1rem, 1fr);
+
+    grid-template-areas:
+      ". title title title ."
+      ". tabs content image .";
+    justify-items: start;
+    padding-right: 0;
+    padding-left: 10rem;
+  }
+  
+  .number-indicators .number-list {
+    width: 5rem;
+  }
+  .grid-container--technology .numbered-title {
+    grid-column: 2 / span 2;
+  }
+  .grid-container--technology > picture {
+    grid-column: 4 / span 2;
+    justify-self: end;
+    max-width: 90%;
   }
 
   /* Crew */
