@@ -521,7 +521,7 @@ picture[hidden] {
 .number-indicators *:hover,
 .number-indicators *:focus {
   border-color: hsl(var(--clr-white) / 0.75);
-  color: hsl(var(--clr-white) / .8);
+  color: hsl(var(--clr-white) / 0.8);
 }
 
 .number-indicators > [aria-selected="true"] {
@@ -529,11 +529,10 @@ picture[hidden] {
   background-color: hsl(var(--clr-white));
 }
 .number-indicators > [aria-selected="true"]:hover,
-.number-indicators > [aria-selected="true"]:focus{
-  color: hsl(var(--clr-dark) /.5);
-  background-color: hsl(var(--clr-white) / .8);
-    border-color: hsl(var(--clr-white) / 0);
-
+.number-indicators > [aria-selected="true"]:focus {
+  color: hsl(var(--clr-dark) / 0.5);
+  background-color: hsl(var(--clr-white) / 0.8);
+  border-color: hsl(var(--clr-white) / 0);
 }
 
 /* .primary-header {
@@ -648,8 +647,7 @@ picture[hidden] {
     "image"
     "tabs"
     "content";
-      --flow-space: 2rem;
-
+  --flow-space: 2rem;
 }
 
 .grid-container--technology picture {
@@ -753,7 +751,10 @@ picture[hidden] {
   }
 
   .grid-container--technology {
-    grid-template-columns: minmax(1rem, 1fr) minmax(0, 10rem) minmax(20rem, 60rem) minmax(0, 60rem) minmax(1rem, 1fr);
+    grid-template-columns: minmax(1rem, 1fr) minmax(0, 10rem) minmax(
+        20rem,
+        60rem
+      ) minmax(0, 60rem) minmax(1rem, 1fr);
 
     grid-template-areas:
       ". title title title ."
@@ -762,7 +763,6 @@ picture[hidden] {
     justify-items: start;
     padding-right: 0;
     /* margin-left: 10rem; */
-    
   }
   .number-indicators .number-list {
     width: 5rem;
