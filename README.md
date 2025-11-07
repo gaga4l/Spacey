@@ -25,7 +25,7 @@ Users should be able to:
 
 ### Screenshot
 
-[Home page](./assets/image.png)
+![Home page](./assets/image.png)
 
 ### Links
 
