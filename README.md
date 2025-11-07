@@ -29,7 +29,7 @@ Users should be able to:
 
 ### Links
 
-- Live site URL: [Add solution URL here](https://your-solution-url.com)
+- Live site URL: [Add solution URL here](spacenerds.vercel.app)
 - Solution URL: [](https://github.com/gaga4l/Spacey)
 
 ## My process
